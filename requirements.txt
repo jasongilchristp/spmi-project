@@ -1,4 +1,5 @@
 flask
+dill
 pandas
 numpy
 matplotlib
