@@ -40,4 +40,4 @@ def predict():
         return render_template('predict.html', results=results[0])
     
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", debug=True) ##maps with localhost, 127.0.0.1 ip address
+    app.run(host="0.0.0.0", port=5000) ##maps with localhost, 127.0.0.1 ip address
