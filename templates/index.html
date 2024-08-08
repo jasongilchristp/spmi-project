@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <title>Student Exam Performance Indicator</title>
+    </head>    
+<body>
+    <div class="container">
+        <h1>Welcome to the Student Exam Performance Indicator!</h1>
+        <h2>Predict your Maths score based on various input features.</h2>
+        <a href="{{ url_for('predict') }}" class="btn-start">Get Started</a>
+    </div>
+</body>
+</html>
