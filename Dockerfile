@@ -42,3 +42,8 @@ ENV NAME World
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
+# Allocate Swap Space
+RUN fallocate -l 2G /swapfile && \
+    chmod 600 /swapfile && \
+    mkswap /swapfile && \
+    swapon /swapfile
