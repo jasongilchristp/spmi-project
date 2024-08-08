@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my_project"
+version = "0.1.0"
+description = "Student Performance Marks Indicator project. (Python, Machine Learning)"
+authors = [{name = "Jason Gilchrist P", email = "jason.gilchrist.p@gmail.com"}]
+# Add project dependencies here if you want to manage them with pyproject.toml
