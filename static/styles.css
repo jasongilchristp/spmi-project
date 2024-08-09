@@ -98,7 +98,11 @@ form legend {
     box-shadow: 0 0 12px rgba(0, 255, 255, 0.8); /* Neon cyan focus shadow */
     outline: none;
 }
-
+.form-label {
+    font-size: 22px; /* Increase text size to 26px */
+    color: #fff; /* Neon white */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Neon white text shadow */
+}
 
 .btn {
     width: 100%;
@@ -264,3 +268,15 @@ a:hover {
         padding: 10px;
     }
 }
+
+.container {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3); /* Neon white shadow */
+    max-width: 70vw; /* Set container width to 70% of viewport width */
+    width: 100%;
+    text-align: center;
+}
+
+
