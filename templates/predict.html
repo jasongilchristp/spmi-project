@@ -1,114 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-        <title>Student Exam Performance Indicator</title>
-    </head>
-    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Student Performance MATHS Indicator</title>
+</head>
+
 <body>
     <div class="container">
-       <h1>Student Exam Performance Indicator</h1>
-   
-       <form action="{{ url_for('predict')}}" method="post">
-        <legend>Student Exam Performance Prediction</legend>
-        <div class="mb-3">
-            <label class="form-label">Gender:</label>
-            <select class="form-control" name="gender" placeholder="Enter your Gender" required>
-                <option class="placeholder" selected disabled value="">Select your Gender</option>
-                <option value="male">
-                    Male
-                </option>
-                <option value="female">
-                    Female
-                </option>
-            </select>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Religion:</label>
-            <select class="form-control" name="race_ethnicity" placeholder="Enter your ethnicity" required>
-                <option class="placeholder" selected disabled value="">Select your Religion</option>
-                <option value="group A">
-                    Buddhism
-                </option>
-                <option value="group B">
-                    Christianity                
-                </option>
-                <option value="group C">
-                    Hinduism
-                </option>
-                <option value="group D">
-                    Islam
-                </option>
-                <option value="group E">
-                    Sikhism
-                </option>
-            </select>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Parent's Education:</label>
-            <select class="form-control" name="parental_level_of_education"
-                placeholder="Enter your Parent Education" required>
-                <option class="placeholder" selected disabled value="">Select your Parent's Education Level</option>
-                <option value="bachelor's degree">
-                    Bachelor's Degree
-                </option>
-                <option value="some college">
-                    College
-                </option>
-                <option value="associate's degree">
-                    Diploma
-                </option>
-                <option value="high school">
-                    High School
-                </option>
-                <option value="master's degree">
-                    Master's Degree
-                </option>
-            </select>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Sleep:</label>
-            <select class="form-control" name="lunch" placeholder="Enter your Lunch" required>
-                <option class="placeholder" selected disabled value="">Select your Sleep duration before Exam</option>
-                <option value="free/reduced">
-                    Reduced
-                </option>
-                <option value="standard">
-                    Standard
-                </option>
-            </select>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Revision:</label>
-            <select class="form-control" name="test_preparation_course" placeholder="Enter your Course"
-                required>
-                <option class="placeholder" selected disabled value="">Have you done your Math's Revision?</option>
-                <option value="none">
-                    No
-                </option>
-                <option value="completed">
-                    Yes
-                </option>
-            </select>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Writing Skills:</label>
-            <input class="form-control" type="number" name="writing_score"
-                placeholder="Enter your Writing score (0 to 100)" min='0' max='100'step="0.01" />
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Reading Skills:</label>
-            <input class="form-control" type="number" name="reading_score"
-                placeholder="Enter your Reading Score (0 to 100)" min='0' max='100' />
-        </div>
-        <div class="mb-3">
-            <input class="btn btn-primary" type="submit" value="Predict Score" />
-        </div>
-    </form>
-    <h2>Your predicted Maths score is: {{results}}</h2>
-    <a href="{{ url_for('index') }}">Go back to Home</a>
+        <h1>Student Performance MATHS Indicator</h1>
+
+        <form action="{{ url_for('predict')}}" method="post">
+            <legend>MATHS Exam Marks Prediction</legend>
+            <div class="mb-3">
+                <label class="form-label">Gender:
+                </label>
+                <select class="form-control" name="gender" placeholder="Enter your Gender" required>
+                    <option class="placeholder" selected disabled value="">Select your Gender</option>
+                    <option value="male">
+                        Male
+                    </option>
+                    <option value="female">
+                        Female
+                    </option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Religion:
+                </label>
+                <select class="form-control" name="race_ethnicity" placeholder="Enter your ethnicity" required>
+                    <option class="placeholder" selected disabled value="">Select your Religion</option>
+                    <option value="group A">
+                        Buddhism
+                    </option>
+                    <option value="group B">
+                        Christianity
+                    </option>
+                    <option value="group C">
+                        Hinduism
+                    </option>
+                    <option value="group D">
+                        Islam
+                    </option>
+                    <option value="group E">
+                        Sikhism
+                    </option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Parent's Education:
+                </label>
+                <select class="form-control" name="parental_level_of_education"
+                    placeholder="Enter your Parent Education" required>
+                    <option class="placeholder" selected disabled value="">Select the highest education level achieved by your parents</option>
+                    <option value="bachelor's degree">
+                        Bachelor's Degree
+                    </option>
+                    <option value="some college">
+                        College
+                    </option>
+                    <option value="associate's degree">
+                        Diploma
+                    </option>
+                    <option value="high school">
+                        High School
+                    </option>
+                    <option value="master's degree">
+                        Master's Degree
+                    </option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Sleep:
+                </label>
+                <select class="form-control" name="lunch" placeholder="Select the sleep duration before the exam" required>
+                    <option class="placeholder" selected disabled value="">Select the sleep duration before the Exam
+                    </option>
+                    <option value="free/reduced">
+                        Reduced (less than 7 hours)
+                    </option>
+                    <option value="standard">
+                        Standard (7 to 9 hours)
+                    </option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Maths Revision:
+                </label>
+                <select class="form-control" name="test_preparation_course" placeholder="Enter your Course" required>
+                    <option class="placeholder" selected disabled value="">Did you complete your Math's revision?
+                    </option>
+                    <option value="none">
+                        No
+                    </option>
+                    <option value="completed">
+                        Yes
+                    </option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Writing Skills:
+                </label>
+                <input class="form-control" type="number" name="writing_score" placeholder="Enter your writing score between 0 and 100"
+                    min='0' max='100' step="0.01" required/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Reading Skills:
+                </label>
+                <input class="form-control" type="number" name="reading_score" placeholder="Enter your reading score between 0 and 100"
+                    min='0' max='100' required/>
+            </div>
+            <div class="mb-3">
+                <input class="btn btn-primary" type="submit" value="Predict Score" />
+            </div>
+        </form>
+
+        <h2>Your predicted maths score is: {{results}}</h2>
+        <a href="{{ url_for('index') }}">Go back to Home</a>
     </div>
 </body>
+
 </html>
