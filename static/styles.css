@@ -1,205 +1,117 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background: #000; /* Black background */
-    color: #fff; /* White text */
+    background: #101010; /* Dark grey background for a professional look */
+    color: #e0e0e0; /* Light grey text for readability */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensure body height is at least viewport height */
-    overflow: auto; /* Enable scrolling if content overflows */
-    animation: fadeIn 1s ease-in;
+    min-height: 100vh;
+    overflow: auto;
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.8); /* Darker background for contrast */
-    padding: 30px; /* Adjust padding */
-    border-radius: 20px;
-    box-shadow: 0 12px 40px rgba(0, 255, 255, 0.5); /* Neon cyan shadow */
-    max-width: 500px; /* Adjust max-width */
+    background-color: #1a1a1a; /* Slightly lighter grey for contrast */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2); /* Softer neon cyan shadow */
+    max-width: 600px;
     width: 100%;
     text-align: center;
-    display: flex; /* Use flexbox */
-    flex-direction: column; /* Stack child elements vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    margin: 0 auto;
-    animation: slideIn 0.5s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container h1 {
-    font-size: 36px;
+    font-size: 32px;
     color: #0ff; /* Neon cyan */
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* Neon cyan shadow */
-    animation: fadeInUp 0.5s ease-in-out;
+    text-transform: capitalize;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5); /* Subtle neon glow */
 }
 
 form {
     width: 100%;
-    display: flex; /* Use flexbox */
-    flex-direction: column; /* Stack child elements vertically */
-    align-items: center; /* Center horizontally */
-    margin-top: 20px; /* Margin for spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
 form legend {
-    font-size: 26px;
-    color: #fff; /* Neon white */
+    font-size: 22px;
+    color: #e0e0e0; /* Light grey for legibility */
     margin-bottom: 20px;
     font-weight: bold;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Neon white shadow */
-    animation: fadeInUp 0.5s ease-in-out;
 }
 
 .mb-3 {
-    margin-bottom: 25px;
-    width: 100%; /* Ensure full width */
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .form-control {
     width: 100%;
-    padding: 18px;
-    border-radius: 12px;
-    border: 2px solid #0ff; /* Neon cyan border */
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #0ff; /* Neon cyan border */
     margin-top: 10px;
-    font-size: 18px;
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
+    font-size: 16px;
+    background-color: #101010; /* Darker background inside input */
+    color: #e0e0e0; /* Light grey text */
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeIn 0.5s ease-in;
     box-sizing: border-box;
-}
-
-.form-control {
-    width: 100%;
-    padding: 18px;
-    border-radius: 12px;
-    border: 2px solid #0ff; /* Neon cyan border */
-    margin-top: 10px;
-    font-size: 18px;
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeIn 0.5s ease-in;
-    box-sizing: border-box;
-}
-
-.form-control::placeholder {
-    color: #fff; /* White placeholder text */
-    opacity: 0.7; /* Slightly transparent placeholder */
 }
 
 .form-control:focus {
-    border-color: #0ff; /* Neon cyan focus border */
-    box-shadow: 0 0 12px rgba(0, 255, 255, 0.8); /* Neon cyan focus shadow */
+    border-color: #0ff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Softer focus shadow */
     outline: none;
 }
+
 .form-label {
-    font-size: 22px; /* Increase text size to 26px */
-    color: #fff; /* Neon white */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Neon white text shadow */
+    font-size: 18px;
+    color: #e0e0e0; /* Light grey */
 }
 
 .btn {
     width: 100%;
-    padding: 18px;
+    padding: 16px;
     background-color: #0ff; /* Neon cyan */
     border: none;
-    border-radius: 12px;
-    color: #000; /* Black text */
-    font-size: 20px;
+    border-radius: 8px;
+    color: #101010; /* Dark background */
+    font-size: 18px;
     cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 6px 18px rgba(0, 255, 255, 0.5); /* Neon cyan shadow */
-    animation: buttonPop 0.5s ease-out;
-}
-
-.btn-primary {
-    background-color: #0ff; /* Neon cyan */
+    text-transform: capitalize;
+    transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #0ff; /* Neon cyan on hover */
-    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Neon cyan shadow */
-}
-
-.btn:hover {
-    background-color: #0ff; /* Neon cyan on hover */
-    transform: scale(1.08);
+    background-color: #00e5e5; /* Slightly lighter cyan on hover */
 }
 
 h2 {
-    color: #fff; /* Neon white */
-    margin-top: 35px;
-    font-size: 28px;
+    color: #e0e0e0;
+    margin-top: 30px;
+    font-size: 24px;
     font-weight: bold;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Neon white shadow */
-    animation: fadeInUp 0.5s ease-in-out;
 }
 
-/* Link Styling */
 a {
-    color: #0ff; /* Neon cyan */
+    color: #0ff;
     text-decoration: none;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-    text-shadow: 0 0 5px rgba(0, 255, 255, 0.8); /* Neon cyan shadow */
+    transition: color 0.3s ease;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3); /* Slight neon glow */
 }
 
 a:hover {
-    color: #fff; /* White text on hover */
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Neon white shadow */
+    color: #e0e0e0; /* Light grey on hover */
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes buttonPop {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* For tablets */
 @media (max-width: 768px) {
     .container {
         padding: 30px;
@@ -211,30 +123,24 @@ a:hover {
     }
 
     form legend {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .form-control {
-        padding: 14px;
-        font-size: 16px;
+        padding: 12px;
+        font-size: 14px;
     }
 
     .btn {
-        font-size: 18px;
-        padding: 14px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    select {
         font-size: 16px;
         padding: 12px;
     }
+
+    h2 {
+        font-size: 22px;
+    }
 }
 
-/* For mobile phones */
 @media (max-width: 480px) {
     .container {
         padding: 20px;
@@ -246,37 +152,20 @@ a:hover {
     }
 
     form legend {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .form-control {
-        padding: 12px;
+        padding: 10px;
         font-size: 14px;
     }
 
     .btn {
-        font-size: 16px;
-        padding: 12px;
+        font-size: 14px;
+        padding: 10px;
     }
 
     h2 {
         font-size: 20px;
     }
-
-    select {
-        font-size: 14px;
-        padding: 10px;
-    }
 }
-
-.container {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3); /* Neon white shadow */
-    max-width: 70vw; /* Set container width to 70% of viewport width */
-    width: 100%;
-    text-align: center;
-}
-
-
